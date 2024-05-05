@@ -426,7 +426,7 @@ pub fn build(b: *std.Build) !void {
     const optimization_modes = chosen_opt_modes_buf[0..chosen_mode_index];
 
     const fmt_include_paths = &.{ "doc", "lib", "src", "test", "tools", "build.zig" };
-    const fmt_exclude_paths = &.{"test/cases"};
+    const fmt_exclude_paths = &.{ "doc/langref", "test/cases" };
     const do_fmt = b.addFmt(.{
         .paths = fmt_include_paths,
         .exclude_paths = fmt_exclude_paths,
